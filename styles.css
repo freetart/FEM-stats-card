@@ -7,10 +7,10 @@
   --secondary-bg-color: #1c1938;
   --primary-color: #9454c5;
   --text-color: #dddee3;
+  --text-muted: #514f65;
 }
 
 /* globals */
-
 * {
   margin: 0;
   padding: 0;
