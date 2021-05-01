@@ -5,7 +5,7 @@
 :root {
   --main-bg-color: #0a0d1b;
   --secondary-bg-color: #1c1938;
-  --primary-color: #9454c5;
+  --primary-color: rgb(148, 84, 197);
   --text-color: #dddee3;
   --text-muted: #a19fbd;
 }
@@ -33,6 +33,7 @@ body {
   padding: 2rem;
 }
 
+/* card */
 .stats-card {
   background-color: var(--secondary-bg-color);
   display: grid;
@@ -63,7 +64,7 @@ body {
   line-height: 1.6;
   letter-spacing: 1px;
   font-size: 0.9rem;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 .stats {
@@ -89,12 +90,30 @@ body {
   object-fit: cover;
 }
 
+.stats-card-img-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.stats-card-img-overlay {
+  background-color: rgba(148, 84, 197, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* media queries */
 @media (max-width: 700px) {
   .stats-card {
     grid-template-columns: 1fr;
   }
 
-  .stats-card-img {
+  .stats-card-img-container {
     order: -1;
   }
 }
@@ -123,7 +142,7 @@ body {
   }
 
   .stat {
-    padding: 1rem 0;
+    padding: 0.7rem 0;
   }
 
   .stat-number {
