@@ -10,7 +10,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
     <title>Frontend Mentor | Stats preview card component</title>
   </head>
   <body>
@@ -29,17 +29,23 @@
           <div class="stats">
             <!-- single stat -->
             <div class="stat">
-              <h4 class="stat-number">10k+</h4>
-              <p class="stat-desc">companies</p>
+              <div class="counter-container">
+                <h4 class="stat-number counter" data-target="104">10</h4>
+                <span>K+</span>
+              </div>
+              <p class="stat-desc">clients</p>
             </div>
             <!-- single stat -->
             <div class="stat">
-              <h4 class="stat-number">314</h4>
+              <h4 class="stat-number counter" data-target="314"></h4>
               <p class="stat-desc">templates</p>
             </div>
             <!-- single stat -->
             <div class="stat">
-              <h4 class="stat-number">12M+</h4>
+              <div class="counter-container">
+                <h4 class="stat-number counter" data-target="550"></h4>
+                <span>K+</span>
+              </div>
               <p class="stat-desc">queries</p>
             </div>
           </div>

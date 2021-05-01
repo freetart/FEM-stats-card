@@ -73,6 +73,16 @@ body {
   align-items: center;
 }
 
+.counter-container {
+  display: flex;
+  align-items: center;
+}
+
+.counter-container span {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
 .stat-number {
   color: var(--text-color);
   letter-spacing: 1px;
@@ -146,6 +156,10 @@ body {
   }
 
   .stat-number {
+    font-size: 1rem;
+  }
+
+  .counter-container span {
     font-size: 1rem;
   }
 
