@@ -7,7 +7,7 @@
   --secondary-bg-color: #1c1938;
   --primary-color: #9454c5;
   --text-color: #dddee3;
-  --text-muted: #514f65;
+  --text-muted: #a19fbd;
 }
 
 /* globals */
@@ -19,4 +19,118 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: var(--main-bg-color);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.stats-card {
+  background-color: var(--secondary-bg-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.stats-card-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.card-title {
+  color: var(--text-color);
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+.card-title .highlight {
+  color: var(--primary-color);
+}
+
+.card-desc {
+  color: var(--text-muted);
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-number {
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.stat-desc {
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.stats-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .stats-card {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-card-img {
+    order: -1;
+  }
+}
+
+@media (max-width: 400px) {
+  .stats-card-info {
+    padding: 1rem;
+  }
+
+  .card-title,
+  .card-desc {
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-desc {
+    font-size: 0.8rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stat {
+    padding: 1rem 0;
+  }
+
+  .stat-number {
+    font-size: 1rem;
+  }
+
+  .stat-desc {
+    font-size: 0.9rem;
+  }
 }
