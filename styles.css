@@ -39,6 +39,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .stats-card-info {
@@ -166,4 +167,34 @@ body {
   .stat-desc {
     font-size: 0.9rem;
   }
+}
+
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  color: #fff;
+}
+.footer h3 {
+  font-size: size(xxs);
+}
+
+.footer a {
+  color: #fff;
+  outline: 0;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.footer a:hover,
+.footer a:focus {
+  text-decoration: underline;
+}
+
+.footer img {
+  width: 5rem;
 }
